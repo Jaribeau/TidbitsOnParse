@@ -87,12 +87,32 @@ category#android.intent.category.LAUNCHER
 ADDED from AndroidManifest.xml:39:17
 	android:name
 		ADDED from AndroidManifest.xml:39:27
-meta-data#com.google.android.gms.version
+activity#com.parse.ui.ParseLoginActivity
 ADDED from AndroidManifest.xml:42:9
-	android:value
+	android:label
 		ADDED from AndroidManifest.xml:44:13
+	android:launchMode
+		ADDED from AndroidManifest.xml:45:13
 	android:name
 		ADDED from AndroidManifest.xml:43:13
+meta-data#com.parse.ui.ParseLoginActivity.PARSE_LOGIN_ENABLED
+ADDED from AndroidManifest.xml:47:13
+	android:value
+		ADDED from AndroidManifest.xml:49:17
+	android:name
+		ADDED from AndroidManifest.xml:48:17
+meta-data#com.parse.ui.ParseLoginActivity.PARSE_LOGIN_EMAIL_AS_USERNAME
+ADDED from AndroidManifest.xml:50:13
+	android:value
+		ADDED from AndroidManifest.xml:52:17
+	android:name
+		ADDED from AndroidManifest.xml:51:17
+meta-data#com.google.android.gms.version
+ADDED from AndroidManifest.xml:54:9
+	android:value
+		ADDED from AndroidManifest.xml:56:13
+	android:name
+		ADDED from AndroidManifest.xml:55:13
 uses-sdk
 INJECTED from AndroidManifest.xml:0:0 reason: use-sdk injection requested
 MERGED from com.android.support:appcompat-v7:22.2.0:20:5

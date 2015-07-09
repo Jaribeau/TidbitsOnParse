@@ -290,6 +290,8 @@
     <string name="hello_world">Hello world!</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="parse_app_id">fTUUrjAanu1l9Hpl8n7FdLFpDQ9jVcANs64iOnDd</string>
+    <string name="parse_client_key">LRqnxqUU8lkXg19ScJqSQrAAs06SFr5pHRt0N5g8</string>
     <!-- From: file:/C:/Users/Jared/Dropbox/Development/Tidbits/Tidbits/app/src/main/res/values/strings_activity_login.xml -->
     <eat-comment/>
     <string name="plus_disconnect">Disconnect from Google+</string>

@@ -1959,17 +1959,19 @@ containing a value of this type.
         public static final int hello_world=0x7f060036;
         public static final int navigation_drawer_close=0x7f060037;
         public static final int navigation_drawer_open=0x7f060038;
-        public static final int plus_disconnect=0x7f060039;
-        public static final int plus_sign_out=0x7f06003a;
-        public static final int prompt_email=0x7f06003b;
-        public static final int prompt_password=0x7f06003c;
-        public static final int status_bar_notification_info_overflow=0x7f06003d;
-        public static final int title_activity_contact_list=0x7f06003e;
-        public static final int title_activity_login=0x7f06003f;
-        public static final int title_activity_splash=0x7f060040;
-        public static final int title_section1=0x7f060041;
-        public static final int title_section2=0x7f060042;
-        public static final int title_section3=0x7f060043;
+        public static final int parse_app_id=0x7f060039;
+        public static final int parse_client_key=0x7f06003a;
+        public static final int plus_disconnect=0x7f06003b;
+        public static final int plus_sign_out=0x7f06003c;
+        public static final int prompt_email=0x7f06003d;
+        public static final int prompt_password=0x7f06003e;
+        public static final int status_bar_notification_info_overflow=0x7f06003f;
+        public static final int title_activity_contact_list=0x7f060040;
+        public static final int title_activity_login=0x7f060041;
+        public static final int title_activity_splash=0x7f060042;
+        public static final int title_section1=0x7f060043;
+        public static final int title_section2=0x7f060044;
+        public static final int title_section3=0x7f060045;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080075;

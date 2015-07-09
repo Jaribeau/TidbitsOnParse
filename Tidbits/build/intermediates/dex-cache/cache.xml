@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\libs\internal_impl-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="57f2ab85c164ff1676ec64dee787981c046fab79">
+        <dex dex="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\pre-dexed\debug\internal_impl-22.2.0-d4a304aa5692b3d84c91cd1297e7a3acc36c3ebb.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\4.2.42\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="e5f81129dfb3d02df80126512bc98278ed2bb40a">
+        <dex dex="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\pre-dexed\debug\classes-ffd0818387de77e9fb712041873818a300ef1a5b.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\libs\Parse-1.9.3.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="35921ead63f6cafd9f84ff178c60fe474c4b17a6">
+        <dex dex="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\pre-dexed\debug\Parse-1.9.3-fe2e74d3f20d31bea47717c51ac7d02c2fba4852.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jared\.gradle\caches\modules-2\files-2.1\com.parse.bolts\bolts-android\1.2.0\6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd\bolts-android-1.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="6ee2953ccf51ce72b6d548c30c4633b99eb4f9dd">
+        <dex dex="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\pre-dexed\debug\bolts-android-1.2.0-5e5e8469bdae992806e6f7f1bfc8a77024edf4bc.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="73753982da6bde518f3a4c6b372749981d14d1a0">
+        <dex dex="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\pre-dexed\debug\classes-4288ea7af220dfcf20bcf4568dcc028d20d8ca10.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jared\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\22.2.0\support-annotations-22.2.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="66b42a1f3eb7676070b7ef7f14b603483aecbee1">
+        <dex dex="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\pre-dexed\debug\support-annotations-22.2.0-9660f34f9810de34db2b6257b2325dded99034c9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\exploded-aar\com.android.support\support-v4\22.2.0\jars\classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee588ff2c4daf7b97c1cbf922a6c7f027285c2f">
+        <dex dex="C:\Users\Jared\Dropbox\Development\Tidbits\Tidbits\app\build\intermediates\pre-dexed\debug\classes-7ec79768c8dbd06dbfa510ce8c2156cc07302948.jar" />
+    </item>
+
+</items>

@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.Window;
 import android.widget.EditText;
 
 import com.parse.LogInCallback;
@@ -21,10 +22,12 @@ public class LoginActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        //Hide actionbar
+        if(getSupportActionBar() != null)
+            getSupportActionBar().hide();
+
         setContentView(R.layout.activity_login);
-
-
-
     }
 
     @Override
@@ -78,16 +81,52 @@ public class LoginActivity extends ActionBarActivity {
         });
     }
 
+    public void createUser(View view){
+        Log.d("DEBUG", "createUser() called");
+        //Show loading
+
+        String emailAddress;
+        String password;
+
+        EditText emailField = (EditText)findViewById(R.id.loginEmailField);
+        EditText passwordField = (EditText)findViewById(R.id.loginPasswordField);
+
+        emailAddress = emailField.getText().toString();
+        password = passwordField.getText().toString();
+
+        //TODO: Check string validity here
+
+        ParseUser user = new ParseUser();
+        user.setUsername(emailAddress);
+        user.setPassword(password);
+        user.setEmail(emailAddress);
+
+        // other fields can be set just like with ParseObject
+        //user.put("phone", "650-555-0000");
+
+        user.signUpInBackground(new SignUpCallback() {
+            //done() runs in UI thread after signup finishes in background
+            public void done(ParseException e) {
+                if (e == null) {
+                    // Hooray! Let them use the app now.
+                    openLoggedInApp(true);
+
+                    //Hide loading
+                } else {
+                    // Sign up didn't succeed. Look at the ParseException
+                    // to figure out what went wrong
+                    Log.d("DEBUG", e.toString());
+                    showDebugAlert("Signup Failed", e.toString());
+
+                    //Hide loading
+                }
+            }
+        });
+    }
+
     private void openLoggedInApp(boolean isNewUser){
         Intent intent = new Intent(this, ContactsActivity.class);
         intent.putExtra("isNewUser", isNewUser);
-        startActivity(intent);
-        finish();
-    }
-
-    public void openCreateAccountActivity(View view){
-        Log.d("DEBUG", "openCreateAccountActivity called.");
-        Intent intent = new Intent(this, CreateAccountActivity.class);
         startActivity(intent);
         finish();
     }

@@ -2,7 +2,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.jaribeau.dev.tidbits.LoginActivity">
+    tools:context="com.jaribeau.dev.tidbits.LoginActivity"
+    android:id="@+id/loginView">
 
     <EditText
         android:id="@+id/loginEmailField"
@@ -26,8 +27,7 @@
         android:layout_marginTop="@dimen/abc_text_size_body_2_material" />
 
     <Button
-        android:id="@+id/button"
-
+        android:id="@+id/signInButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sign_in_button"
@@ -37,15 +37,38 @@
         android:layout_marginBottom="@dimen/abc_button_padding_vertical_material"
         android:onClick="attemptLogin"/>
 
+    <Button
+        android:id="@+id/createAccountButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/create_account_button"
+        android:layout_below="@+id/loginPasswordField"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/abc_button_padding_vertical_material"
+        android:layout_marginBottom="@dimen/abc_button_padding_vertical_material"
+        android:visibility="gone"
+        android:onClick="createUser"/>
+
     <TextView
         android:id="@+id/noAccountText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
         android:text="@string/login_no_account"
-        android:layout_below="@+id/button"
+        android:layout_below="@+id/signInButton"
         android:layout_centerHorizontal="true"
         android:clickable="true"
-        android:onClick="openCreateAccountActivity"/>
+        android:onClick="toggleNewUserMode"/>
+
+    <TextView
+        android:id="@+id/continueAsAnonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/continue_as_anon"
+        android:layout_below="@+id/createAccountButton"
+        android:layout_centerHorizontal="true"
+        android:clickable="true"
+        android:visibility="gone"/>
 
 </RelativeLayout>

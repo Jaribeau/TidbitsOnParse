@@ -8,16 +8,25 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
 import com.parse.SignUpCallback;
 
+//DONE: Make create user work
+//CANCELLED: Make anon user work
+//DONE: Add switch between crete/login
+//TODO: Add login verification logic
+//TODO: Beautify (icons, etc)
+//TODO: Add google login
 
 public class LoginActivity extends ActionBarActivity {
+
+    private boolean newUserModeEnabled = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -81,6 +90,7 @@ public class LoginActivity extends ActionBarActivity {
         });
     }
 
+    //TODO: Make the create user button work again.
     public void createUser(View view){
         Log.d("DEBUG", "createUser() called");
         //Show loading
@@ -133,16 +143,41 @@ public class LoginActivity extends ActionBarActivity {
 
     private void showDebugAlert(String title, String message){
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(LoginActivity.this);
-
-        // Setting Dialog Title
         alertDialog.setTitle(title);
-
-        // Setting Dialog Message
         alertDialog.setMessage(message);
-
         alertDialog.show();
     }
 
+    public void toggleNewUserMode(View view){
+        Button mSignInButton = (Button) findViewById(R.id.signInButton);
+        Button mCreateAccountButton = (Button) findViewById(R.id.createAccountButton);
+//        TextView mContinueAsAnonText = (TextView) findViewById(R.id.continueAsAnonText);
+        TextView mNoAccountText = (TextView) findViewById(R.id.noAccountText);
 
+        if(!newUserModeEnabled){
+            mSignInButton.setVisibility(View.GONE);
+            mCreateAccountButton.setVisibility(View.VISIBLE);
 
+//            mContinueAsAnonText.setVisibility(View.VISIBLE);
+            mNoAccountText.setVisibility(View.INVISIBLE);
+            newUserModeEnabled = true;
+        }
+        else{
+            mSignInButton.setVisibility(View.VISIBLE);
+            mCreateAccountButton.setVisibility(View.GONE);
+
+//            mContinueAsAnonText.setVisibility(View.GONE);
+            mNoAccountText.setVisibility(View.VISIBLE);
+            newUserModeEnabled = false;
+        }
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        if(newUserModeEnabled)
+            toggleNewUserMode(findViewById(R.id.loginView));
+        else
+            super.onBackPressed(); //Default back button action
+    }
 }

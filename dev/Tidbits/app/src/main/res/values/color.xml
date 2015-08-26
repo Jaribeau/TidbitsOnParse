@@ -4,5 +4,7 @@
     <item name="primary" type="color">#2196F3</item>
     <item name="primary_dark" type="color">#1976D2</item>
     <item name="accent" type="color">#C51162</item>
+    <item name="black" type="color">#000000</item>
+    <item name="white" type="color">#ffffff</item>
 
 </resources>

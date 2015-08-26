@@ -21,14 +21,15 @@ public class SplashScreen extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        setContentView(R.layout.activity_splash_screen);
+
         //Hide actionbar
         if(getSupportActionBar() != null)
             getSupportActionBar().hide();
 
-        setContentView(R.layout.activity_splash_screen);
 
         //Splash Screen Timer
-        new CountDownTimer(3000, 1000) {
+        new CountDownTimer(4000, 1000) {
             public void onFinish() {
                 launchApp();
             }

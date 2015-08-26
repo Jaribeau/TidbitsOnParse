@@ -1,52 +1,75 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.jaribeau.dev.tidbits.LoginActivity"
-    android:id="@+id/loginView">
+    android:id="@+id/loginView"
+    android:background="@drawable/splash_screen_background">
+
+    <ImageView
+        android:id="@+id/tidbitsLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/tidbits_logo"
+        android:maxHeight="150dp"
+        android:maxWidth="150dp"
+        android:adjustViewBounds="true" />
 
     <EditText
         android:id="@+id/loginEmailField"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:hint="@string/email_field_hint"
         android:ems="10"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/tidbitsLogo"
+        android:layout_marginTop="80dp"
+        android:layout_centerHorizontal="true"
+        android:background="#75000000"
+        android:drawableLeft="@drawable/login_screen_user_icon"
+        android:drawableStart="@drawable/login_screen_user_icon"
+        android:drawablePadding="10dp"/>
 
     <EditText
         android:id="@+id/loginPasswordField"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:hint="@string/password_field_hint"
         android:ems="10"
         android:layout_below="@+id/loginEmailField"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/abc_text_size_body_2_material" />
+        android:layout_marginTop="@dimen/abc_text_size_body_2_material"
+        android:background="#75000000"
+        android:drawableLeft="@drawable/login_screen_lock_icon"
+        android:drawableStart="@drawable/login_screen_lock_icon"
+        android:drawablePadding="10dp"/>
 
     <Button
         android:id="@+id/signInButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
         android:text="@string/sign_in_button"
         android:layout_below="@+id/loginPasswordField"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/abc_button_padding_vertical_material"
-        android:layout_marginBottom="@dimen/abc_button_padding_vertical_material"
+        android:layout_alignLeft="@+id/loginEmailField"
+        android:layout_alignStart="@+id/loginEmailField"
+        android:layout_marginTop="@dimen/abc_text_size_body_2_material"
+        android:background="@drawable/button_stroke"
         android:onClick="attemptLogin"/>
 
     <Button
         android:id="@+id/createAccountButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
         android:text="@string/create_account_button"
         android:layout_below="@+id/loginPasswordField"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/abc_button_padding_vertical_material"
-        android:layout_marginBottom="@dimen/abc_button_padding_vertical_material"
-        android:visibility="gone"
+        android:layout_alignRight="@+id/loginEmailField"
+        android:layout_alignEnd="@+id/loginEmailField"
+        android:layout_marginTop="@dimen/abc_text_size_body_2_material"
+        android:background="@drawable/button_stroke"
         android:onClick="createUser"/>
 
     <TextView
@@ -54,11 +77,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceSmall"
-        android:text="@string/login_no_account"
+        android:text="@string/forgot_password"
+        android:layout_marginTop="20dp"
         android:layout_below="@+id/signInButton"
         android:layout_centerHorizontal="true"
-        android:clickable="true"
-        android:onClick="toggleNewUserMode"/>
+        android:clickable="true"/>
 
     <TextView
         android:id="@+id/continueAsAnonText"
@@ -70,5 +93,6 @@
         android:layout_centerHorizontal="true"
         android:clickable="true"
         android:visibility="gone"/>
+
 
 </RelativeLayout>

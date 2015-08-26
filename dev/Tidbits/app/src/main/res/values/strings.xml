@@ -11,11 +11,15 @@
     <string name="email_field_hint">email</string>
     <string name="password_field_hint">password</string>
     <string name="sign_in_button">Sign in</string>
+    <string name="sign_out_button">Sign out</string>
     <string name="create_account_button">Create</string>
-    <string name="login_no_account"><u>First time here?</u></string>
+    <string name="forgot_password"><u>Forgot your password?</u></string>
     <string name="continue_as_anon">Use app without account</string>
     <string name="title_activity_splash_screen">SplashScreen</string>
 
     <string name="hello_world">Hello world!</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
